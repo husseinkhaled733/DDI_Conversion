@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+message MenuItem {
+  string id = 1;
+  string label = 2;
+}
+
+message Menu {
+  string header = 1;
+  repeated MenuItem items = 2;
+}
