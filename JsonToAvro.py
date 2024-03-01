@@ -44,17 +44,7 @@ avro_schema = {
 
 parsed_schema = fastavro.parse_schema(avro_schema)
 
-avro_file_path = "Avro_output_100.avro"
+avro_file_path = "Avro_output.avro"
 
 with open(avro_file_path, "wb") as avro_file:
     fastavro.writer(avro_file, parsed_schema, [json_object])
-
-print(f"Conversion complete. Avro data saved to '{avro_file_path}'.")
-
-# Load Avro data from file
-with open(avro_file_path, "rb") as avro_file:
-    avro_data = fastavro.reader(avro_file)
-    for record in avro_data:
-        print(record)
-
-print(avro_data)
