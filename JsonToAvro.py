@@ -41,7 +41,6 @@ avro_schema = {
         }
     ]
 }
-
 parsed_schema = fastavro.parse_schema(avro_schema)
 
 avro_file_path = "Avro_output.avro"
